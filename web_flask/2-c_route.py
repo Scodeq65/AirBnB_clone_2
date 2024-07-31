@@ -16,6 +16,7 @@ def hbnb():
     """function that displays hello hbnb at the root."""
     return "HBNB"
 
+
 @app.route('/c/<text>', strict_slashes=False)
 def c(text):
     """ displays 'C' followed by the value of d var
