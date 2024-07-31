@@ -26,9 +26,9 @@ def c(text):
     return "C {}".format(text)
 
 
-@app.route('/python/', defaults={'text': 'is cool'}, strict_slashes=False)
+@app.route('/python/', strict_slashes=False)
 @app.route('/python/<text>', strict_slashes=False)
-def python_routte(text):
+def python_routte(text="is cool"):
     """ Dispay “Python ”, followed by the value of d var
     (replace underscore _ symbols with a space )
     """
