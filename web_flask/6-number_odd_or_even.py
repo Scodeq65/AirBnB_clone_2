@@ -55,7 +55,7 @@ def number_odd_or_even(n):
     H1 tag: 'Number: n is even|odd' inside d body tag.
     """
     dev = "even" if n % 2 == 0 else "odd"
-    return render_template('6-number_odd_or_even.html', number=n dev=dev)
+    return render_template('6-number_odd_or_even.html', number=n, dev=dev)
 
 
 if __name__ == "__main__":
