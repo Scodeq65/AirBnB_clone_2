@@ -50,7 +50,7 @@ def number_template(n):
 
 
 @app.route('/number_odd_or_even/<int:n>', strict_slashes=False)
-def number_0dd_or_even(n):
+def number_odd_or_even(n):
     """Displays an HTML page only if n is an int.
     H1 tag: 'Number: n is even|odd' inside d body tag.
     """
