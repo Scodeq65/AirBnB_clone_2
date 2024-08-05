@@ -8,6 +8,10 @@ import os
 from models.base_model import Base
 from models.state import State
 from models.city import City
+from models.user import User
+from models.amenity import Amenity
+from models.place import Place
+from models.review import Review
 
 class DBStorage:
     """Database Storage Engine"""
@@ -38,7 +42,7 @@ class DBStorage:
                 key = obj.__class__.__name__ + '.' + obj.id
                 result[key] = obj
         else:
-            for class_name in [State, City]:
+            for class_name in [User, State, City, Amenity, Place, Review]:
                 objs = self.__session.query(class_name).all()
                 for obj in objs:
                     key = obj.__class__.__name__ + '.' + obj.id
